@@ -1,0 +1,68 @@
+/**********************************************************
+* HW03: Locality
+* CS 40
+* README
+* Sam Miller & Nick Dresens
+* 02/22/2023
+*********************************************************/
+
+Acknowledgements: 
+        Our team spent alot of time in office hours and were helped my many
+        very helpful TA's. The TA that was especially helpful for our group
+        was Tina. Tina is the GOAT!
+
+Implementation: 
+        As far as we know, every part of this program has been implemented 
+        correctly. This includes all of the mandatory rotations as well as
+        the extra credit translations. 
+
+Architecture: 
+        This program, ppmtrans, is a C program that takes in a PPM image and 
+        applies various transformations to it, including rotation and flipping,
+        with different mapping techniques. The program is designed to highlight
+        the strengths and weaknesses of the computer cache. The program uses 
+        the a2methods module to implement different types of array methods, 
+        such as plain, row-major, column-major, and block-major. The program
+        takes in command-line arguments to specify the type of transformation 
+        to apply and the mapping technique to use. The -rotate flag specifies 
+        the angle of rotation (0, 90, 180, or 270 degrees). The -row-major, 
+        -col-major, and -block-major flags specify the type of mapping to use.
+        The program also takes in a -time flag, which outputs the execution 
+        time of the program to a file. The program reads in the input PPM image
+        from either a file or standard input and allocates memory for the 
+        output PPM image. The program then calls applyLogic, which brings 
+        together all the logic needed to perform the transformation that the 
+        user calls for on the image. applyLogic makes new image dimensions 
+        depending on the rotation and then calls the appropriate apply function
+        to copy over the pixels to the right locations. The apply functions are
+        called using map function pointer, which is set based on the user's 
+        specified mapping technique.
+
+Measured Performance: 
+
+for Part E and explains your results. Be sure to record in a table the following:
+
+    The sizes of the images used for each of your tests
+    The total CPU time and the time per input pixel for each rotation on each image you report.
+    Making the simplifying assumption that our computers execute approximately 1,000,000,000 instructions per second, estimate for each rotation the number of instructions executed per input pixel rotated.
+    The name and model of the computer you ran your tests on as well as the CPU type and clock rate. (more /proc/cpuinfo)
+    Below your table, discuss patterns you see in the results: for example, do certain rotations run faster when using blocked arrays vs. plain? If you try different sized images (not required but useful), is the number of instructions per pixel similar regardless of image size? If not, why not?
+
+Hours: 
+    We spent approximately 25 hours on this assignment. 
+
+
+
+
+
+
+
+    
+
+
+      
+
+
+
+
+
